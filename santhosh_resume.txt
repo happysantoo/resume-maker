@@ -1,0 +1,59 @@
+SANTHOSH KUPPUSAMY
+Principal/Lead Software Engineer (Fintech/Payments) | VP of Engineering | Cloud Architect
+Phone: (727) 512-2116 | Email: Santhosh.Kuppuswamy@gmail.com
+Location: San Francisco Bay Area (Targeting Relocation)
+PROFESSIONAL SUMMARY
+Highly adaptive and innovative Principal/VP-level Engineer with 20+ years of progressive experience in the Electronic Payments Industry, specializing in Fraud Detection and Prevention. Proven technical leader driving multi-year modernization and scale initiatives for mission-critical financial platforms.
+
+Deep Expertise: Designing and scaling multi-threaded, distributed applications, transitioning monolithic systems to modern cloud-neutral, microservice-based architectures.
+
+Modern Stack: Hands-on experience with high-throughput stream processing using Apache Kafka and Apache Flink to build highly available, low-latency, and resilient systems.
+
+Leadership and Governance: Expert in defining technical roadmaps, governance, FinOps, and operational excellence for platforms handling billions in transactions across hybrid cloud (AWS) environments.
+
+TECHNICAL SKILLS
+Cloud and DevOps
+Kubernetes, AWS, Docker, FinOps, Terraform, CloudFormation, Jenkins, Git
+Architecture
+Microservices, Apache Kafka, Distributed Systems, RESTful APIs, Multi-Threading, Spring Boot
+Modernization and Migration
+Mainframe-to-Cloud Migration, Legacy System Modernization, Application Re-platforming, Strangler Fig Pattern
+Observability
+OpenTelemetry, Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana), Splunk
+Data and Caching
+PostgreSQL, Cassandra, CockroachDB, Redis, Gemfire, Hazelcast
+Domain
+Payment Processing, Fraud Detection and Prevention, Funds Control, ISO 8583/20022
+Languages
+Java, Kotlin, Groovy, SQL
+PROFESSIONAL EXPERIENCE
+JPMORGAN CHASE AND CO.
+Vice President of Software Engineering
+Tampa/St. Petersburg, Florida Area (Targeting Bay Area Relocation)
+November 2017 to Present (8 years)
+Cloud-Native Funds Control Platform: Provided Principal architectural leadership for a cloud-neutral, multi-region resilient funds control platform, resulting in 30% reduced inter-region latency and establishing a new 99.99% availability standard.
+Mainframe Modernization Initiative: Led the strategic modernization of mainframe-hosted legacy payment systems to modern cloud-native architecture. Architected and executed the incremental migration of COBOL-based batch processing systems to containerized Spring Boot microservices on AWS, resulting in 70% reduction in processing time and enabling real-time transaction capabilities. Implemented dual-run validation strategies to ensure zero data loss during the transition.
+Legacy System Modernization: Defined and drove the technical roadmap for core legacy system migration, orchestrating the transition from monolith to microservices, which enabled 60% faster feature release cycles and reduced technical debt by 80%.
+FinOps and Automation: Championed Infrastructure as Code (IaC) best practices (Terraform/CloudFormation) and FinOps principles, optimizing cloud resource consumption to achieve 30% reduction in infrastructure costs.
+Enterprise Security Governance: Drove the adoption of standardized security frameworks across 15+ applications, leveraging the proprietary file encryption system to mitigate PII exposure and ensure SAX audit compliance.
+Observability: Integrated enterprise observability solutions using OpenTelemetry, Prometheus, and Grafana to reduce mean-time-to-resolution (MTTR) and cut production incidents by 45%.
+FIS (Fidelity National Information Services)
+Senior IT Architect
+Milwaukee, Wisconsin, United States
+May 2017 to November 2017 (6 months)
+Cloud Strategy and Microservices: Provided technical leadership on the in-house cloud strategy with OpenShift/Kubernetes adoption, driving the architectural design of a new Digital Banking Platform using Spring Boot Microservices.
+Data Streaming: Architected and implemented a complete message/event delivery backbone using Apache Kafka and Apache Apex for high-throughput micro-batching and real-time data flow.
+FIS (Fidelity National Information Services)
+High-Performance Rules Engine Engineer/Architect
+Milwaukee, Wisconsin, United States
+January 2004 to May 2017 (13 years 5 months)
+Patented Rules Engine Architecture: Architected, developed, and maintained a patented, SOA-certified, highly-scalable XML-based business rule engine (core Fraud/Payments system).
+Performance Metrics: Delivered a fault-tolerant system design that achieved 5000+ Transactions Per Second (TPS) with 99.9% uptime.
+Optimization: Drove performance optimization by implementing strategic caching mechanisms (Gemfire/Hazelcast) that resulted in an 80% reduction in database calls.
+Enterprise Observability and Monitoring: Designed and deployed the ELK stack (Elasticsearch, Logstash, Kibana) for centralized logging and metrics aggregation, providing real-time monitoring of critical financial transaction pipelines.
+Technical Mentorship: Provided sustained technical mentorship and training to offshore engineering teams, establishing coding standards and best practices across the development life cycle.
+EDUCATION
+Master of Computer Applications (MCA)
+Thiagarajar College of Engineering, India (2004)
+Bachelor of Computer Science (B.Sc.)
+Madras University Chennai, India (2001)
