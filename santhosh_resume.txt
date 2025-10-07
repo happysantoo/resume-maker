@@ -7,7 +7,7 @@ Highly adaptive and innovative Principal/VP-level Engineer with 20+ years of pro
 
 Deep Expertise: Designing and scaling multi-threaded, distributed applications, transitioning monolithic systems to modern cloud-neutral, microservice-based architectures.
 
-Modern Stack: Hands-on experience with high-throughput stream processing using Apache Kafka and Apache Flink to build highly available, low-latency, and resilient systems.
+Modern Stack: Hands-on experience with high-throughput payments processing using Apache Kafka and GRPC for service calls to build highly available, low-latency, and resilient systems.
 
 Leadership and Governance: Expert in defining technical roadmaps, governance, FinOps, and operational excellence for platforms handling billions in transactions across hybrid cloud (AWS) environments.
 
@@ -26,6 +26,8 @@ Domain
 Payment Processing, Fraud Detection and Prevention, Funds Control, ISO 8583/20022
 Languages
 Java, Kotlin, Groovy, SQL
+AI
+LLM, Spring AI, Embabel, Copilot
 PROFESSIONAL EXPERIENCE
 JPMORGAN CHASE AND CO.
 Vice President of Software Engineering
@@ -35,8 +37,9 @@ Cloud-Native Funds Control Platform: Provided Principal architectural leadership
 Mainframe Modernization Initiative: Led the strategic modernization of mainframe-hosted legacy payment systems to modern cloud-native architecture. Architected and executed the incremental migration of COBOL-based batch processing systems to containerized Spring Boot microservices on AWS, resulting in 70% reduction in processing time and enabling real-time transaction capabilities. Implemented dual-run validation strategies to ensure zero data loss during the transition.
 Legacy System Modernization: Defined and drove the technical roadmap for core legacy system migration, orchestrating the transition from monolith to microservices, which enabled 60% faster feature release cycles and reduced technical debt by 80%.
 FinOps and Automation: Championed Infrastructure as Code (IaC) best practices (Terraform/CloudFormation) and FinOps principles, optimizing cloud resource consumption to achieve 30% reduction in infrastructure costs.
-Enterprise Security Governance: Drove the adoption of standardized security frameworks across 15+ applications, leveraging the proprietary file encryption system to mitigate PII exposure and ensure SAX audit compliance.
+Enterprise Security Governance: Drove the adoption of standardized security frameworks across 15+ applications, leveraging the proprietary file encryption system to mitigate PII exposure and ensure SOX audit compliance.
 Observability: Integrated enterprise observability solutions using OpenTelemetry, Prometheus, and Grafana to reduce mean-time-to-resolution (MTTR) and cut production incidents by 45%.
+Generative AI: AI-powered Java static analyzer used firmwide for detecting concurrency issues and performance anti-patterns with async batch processing and intelligent caching.
 FIS (Fidelity National Information Services)
 Senior IT Architect
 Milwaukee, Wisconsin, United States
