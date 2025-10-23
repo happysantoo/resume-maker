@@ -139,18 +139,39 @@ def parse_resume_txt(filepath='santhosh_resume.txt'):
     
     return resume_data
 
-def create_resume_pdf(filename='Santhosh_Kuppusamy_Resume.pdf', target_location='San Francisco Bay Area', source_file='santhosh_resume.txt'):
+def create_resume_pdf(filename='Santhosh_Kuppusamy_Resume.pdf', target_location='San Francisco Bay Area', source_file='santhosh_resume.txt', internal_format=False):
     """Create a formatted resume PDF from text file
     
     Args:
         filename: Output PDF filename
         target_location: Target job location (e.g., 'San Francisco Bay Area', 'New York City')
         source_file: Source text file containing resume content
+        internal_format: If True, modifies title for internal use
     """
     
     # Parse the resume text file
     print(f"📖 Reading resume content from {source_file}...")
     resume_data = parse_resume_txt(source_file)
+    
+    # For internal format, override JPMC experience with internal content
+    if internal_format:
+        internal_jpmc_achievements = [
+            "Cloud-Native Funds Control Platform: Provided technical leadership for a cloud-neutral, multi-region resilient funds control platform, targeting reduced inter-region latency and establishing a new 99.99% availability standard.",
+            "Mainframe Modernization Initiative: Led the strategic modernization of mainframe-hosted legacy payment systems to modern cloud-native architecture. Architected and executed the incremental migration of COBOL-based batch processing systems to containerized Spring Boot microservices on AWS, enabling real-time transaction capabilities. Implemented dual-run validation strategies to ensure zero data loss during the transition.",
+            "Legacy System Modernization: Drove the technical roadmap for core legacy system migration, orchestrating the transition from monolith to microservices, enabling faster feature release cycles and reducing technical debt.",
+            "FinOps and Automation: Championed Infrastructure as Code (IaC) best practices (Terraform/CloudFormation) and FinOps principles, optimizing cloud resource consumption to achieve significant reduction in infrastructure costs.",
+            "Enterprise Security Governance: Drove the adoption of standardized security frameworks using IDAnywhere across 15+ applications, connecting to various applications and backends (databases/messaging systems).",
+            "AMPS/Graphite Foundation Activities: Led the Banking AMPS team infrastructure, enabling enhanced security and reconciliation mechanisms supporting the FTPS stack integration for multiple CIB payment systems.",
+            "CCMP/FTPS: Led the Reference Data team and Invoice/Payments Capture team from architecture to implementation. This represents one of the earliest microservices applications targeted for internal cloud deployment.",
+            "Observability: Integrated enterprise observability solutions using OpenTelemetry, Prometheus, and Grafana to reduce mean-time-to-resolution (MTTR) and minimize production incidents.",
+            "Generative AI: Developed AI-powered Java static analyzer used firm-wide for detecting concurrency issues and performance anti-patterns with async batch processing and intelligent caching."
+        ]
+        
+        # Replace JPMC achievements in resume data
+        for job in resume_data['experience']:
+            if 'JPMORGAN' in job['company'] or 'CHASE' in job['company']:
+                job['achievements'] = internal_jpmc_achievements
+                break
     
     # Create the PDF document
     doc = SimpleDocTemplate(
@@ -260,15 +281,30 @@ def create_resume_pdf(filename='Santhosh_Kuppusamy_Resume.pdf', target_location=
     
     # Header
     story.append(Paragraph(resume_data['name'], header_style))
-    story.append(Paragraph(resume_data['title'], subtitle_style))
+    
+    # Modify title for internal format
+    title_text = resume_data['title']
+    if internal_format:
+        title_text = title_text.replace('Principal/Lead Software Engineer', 'Senior Lead Software Engineer')
+        title_text = title_text.replace(' | VP of Engineering | Cloud Architect', '')
+        title_text = title_text.replace(' | VP of Engineering', '')
+        title_text = title_text.replace(' | Cloud Architect', '')
+    
+    story.append(Paragraph(title_text, subtitle_style))
     
     # Extract contact info and update location
     contact_line = resume_data['contact'].replace('Phone:', '').replace('Email:', '')
     contact_parts = [part.strip() for part in contact_line.split('|')]
     if len(contact_parts) >= 2:
-        contact_info = f'{contact_parts[0]} | {contact_parts[1]} | {target_location} (Targeting Relocation)'
+        if target_location == 'No Location Preference':
+            contact_info = f'{contact_parts[0]} | {contact_parts[1]} | Tampa, Florida Area'
+        else:
+            contact_info = f'{contact_parts[0]} | {contact_parts[1]} | {target_location} (Targeting Relocation)'
     else:
-        contact_info = f'{contact_line} | {target_location} (Targeting Relocation)'
+        if target_location == 'No Location Preference':
+            contact_info = f'{contact_line} | Tampa, Florida Area'
+        else:
+            contact_info = f'{contact_line} | {target_location} (Targeting Relocation)'
     
     story.append(Paragraph(contact_info, contact_style))
     
@@ -307,7 +343,10 @@ def create_resume_pdf(filename='Santhosh_Kuppusamy_Resume.pdf', target_location=
         
         # Location and dates on one line - customize for JPMC
         if 'JPMORGAN' in job['company'] or 'CHASE' in job['company']:
-            location_msg = f'Tampa, Florida Area (Targeting {target_location} Relocation)'
+            if target_location == 'No Location Preference':
+                location_msg = 'Tampa, Florida Area'
+            else:
+                location_msg = f'Tampa, Florida Area (Targeting {target_location} Relocation)'
         else:
             location_msg = job['location']
         
@@ -354,4 +393,19 @@ if __name__ == '__main__':
         target_location='New York City'
     )
     
-    print("\n✨ Both resume versions have been generated successfully!")
+    # Generate No Location Preference version
+    print("\n📄 Generating No Location Preference resume...")
+    create_resume_pdf(
+        filename='Santhosh_Kuppusamy_Resume_General.pdf',
+        target_location='No Location Preference'
+    )
+    
+    # Generate Internal Format version
+    print("\n📄 Generating Internal Format resume...")
+    create_resume_pdf(
+        filename='Santhosh_Kuppusamy_Resume_Internal.pdf',
+        target_location='No Location Preference',
+        internal_format=True
+    )
+    
+    print("\n✨ All four resume versions have been generated successfully!")

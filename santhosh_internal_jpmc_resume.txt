@@ -1,0 +1,14 @@
+PROFESSIONAL EXPERIENCE
+JPMORGAN CHASE AND CO.
+Vice President of Software Engineering
+Tampa/St. Petersburg, Florida Area 
+November 2017 to Present (8 years)
+Cloud-Native Funds Control Platform: Provided technical leadership for a cloud-neutral, multi-region resilient funds control platform, targetting reduced inter-region latency and establishing a new 99.99% availability standard.
+Mainframe Modernization Initiative: Led the strategic modernization of mainframe-hosted legacy payment systems to modern cloud-native architecture. Architected and executed the incremental migration of COBOL-based batch processing systems to containerized Spring Boot microservices on AWS, enabling real-time transaction capabilities. Implemented dual-run validation strategies to ensure zero data loss during the transition.
+Legacy System Modernization: Helped drive the technical roadmap for core legacy system migration, orchestrating the transition from monolith to microservices, which enabled faster feature release cycles and reduced technical debt.
+FinOps and Automation: Championed Infrastructure as Code (IaC) best practices (Terraform/CloudFormation) and FinOps principles, optimizing cloud resource consumption to achieve significant reduction in infrastructure costs.
+Enterprise Security Governance: Drove the adoption of standardized security frameworks using IDAnywhere across 15+ applications, connecting to various applications and backends (databases/messaging systems)
+AMPS/Graphite Foundation Activities : Led the Banking AMPS tea infrastructure enabling more security and reconcilliation mechanisms supporting the FTPS stack integration for multiple CIB payment systems.
+CCMP/FTPS - Led the Reference Data team and Invoice/payments Capture team starting from Architecture to implemantation. This is one of the earliest microservices application targetted for internal cloud deployment. 
+Observability: Integrated enterprise observability solutions using OpenTelemetry, Prometheus, and Grafana to reduce mean-time-to-resolution (MTTR) and cut production incidents.
+Generative AI: AI-powered Java static analyzer used firmwide for detecting concurrency issues and performance anti-patterns with async batch processing and intelligent caching.
